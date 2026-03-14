@@ -1,0 +1,35 @@
+
+
+Thumbs.db          # Windows — thumbnail cache
+ehthumbs.db        # Windows — thumbnail cache
+Desktop.ini        # Windows — folder settings
+
+.vscode/           # VS Code settings folder
+.idea/             # JetBrains (WebStorm etc.)
+*.sublime-project  # Sublime Text
+*.sublime-workspace
+*.code-workspace
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+
+
+.env
+.env.local
+.env.production
+.env.*
+
+
+dist/
+build/
+out/
+
+
+*.log
+logs/
+
+*.zip             
+*.tar.gz
+.cache/
