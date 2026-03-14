@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img"
+    aria-label="IDR — Institute of Digital Risk icon">
+
+    <!-- circuit trace — top left arm -->
+    <line x1="17" y1="25" x2="5" y2="25" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.2" />
+    <line x1="5" y1="25" x2="5" y2="13" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.2" />
+    <circle cx="5" cy="12" r="2" fill="#111111" opacity="0.2" />
+
+    <!-- circuit trace — top right arm -->
+    <line x1="50" y1="16" x2="60" y2="10" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.18" />
+    <line x1="60" y1="10" x2="72" y2="10" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.18" />
+    <circle cx="74" cy="10" r="2" fill="#111111" opacity="0.18" />
+
+    <!-- circuit trace — right arm (orange — active signal) -->
+    <line x1="63" y1="40" x2="75" y2="40" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="75" y1="40" x2="75" y2="28" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="75" cy="26" r="2.5" fill="#F97316" />
+
+    <!-- circuit trace — bottom right arm -->
+    <line x1="50" y1="64" x2="60" y2="70" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.18" />
+    <line x1="60" y1="70" x2="72" y2="70" stroke="#111111" stroke-width="1.2" stroke-linecap="round" opacity="0.18" />
+    <circle cx="74" cy="70" r="2" fill="#111111" opacity="0.18" />
+
+    <!-- circuit trace — bottom left arm (orange — active) -->
+    <line x1="17" y1="55" x2="5" y2="62" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="5" y1="62" x2="5" y2="72" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="5" cy="74" r="2.5" fill="#F97316" />
+
+    <!-- Hex body — white fill, black stroke -->
+    <polygon points="40,8 63,21 63,59 40,72 17,59 17,21" fill="#FFFFFF" stroke="#111111" stroke-width="2.5"
+        stroke-linejoin="round" />
+
+    <!-- Inner hex ring — orange tint, subtle -->
+    <polygon points="40,17 56,26 56,54 40,63 24,54 24,26" fill="none" stroke="#F97316" stroke-width="1"
+        opacity="0.25" />
+
+    <!-- alert bar -->
+    <line x1="40" y1="28" x2="40" y2="48" stroke="#F97316" stroke-width="4" stroke-linecap="round" />
+
+    <!-- alert dot -->
+    <circle cx="40" cy="56" r="3.5" fill="#F97316" />
+
+</svg>
