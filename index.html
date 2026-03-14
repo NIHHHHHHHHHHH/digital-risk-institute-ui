@@ -3,9 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Institute of Digital Risk</title>
+  <meta name="description" content="Institute of Digital Risk - training and deploying digital risk practitioners for regulated, high-consequence environments." />
+  <title>Institute of Digital Risk - IDR</title>
 </head>
 <body>
-  <h1>Institute of Digital Risk (IDR)</h1>
+
+  <!-- navigation -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      
+      <a href="#hero" class="logo">IDR</a>
+
+      
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+
+      
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+        menu
+      </button>
+    </div>
+  </nav>
+
+  <!-- mobile menu drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#community">Community</a>
+    <a href="#contact">Get in Touch</a>
+  </div>
+
+
+  <main>
+
+    <!-- hero -->
+    <section id="hero">
+      <h1>Institute of Digital Risk</h1>
+      <p>Advancing the future of digital risk.</p>
+      <a href="#services">Explore Programs</a>
+      <a href="#contact">Hire Talent</a>
+    </section>
+
+
+    <!-- about -->
+    <section id="about">
+      <h2>About IDR</h2>
+      <p>Who we are content goes here.</p>
+    </section>
+
+
+    <!-- services -->
+    <section id="services">
+      <h2>Our Services</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Academy</h3>
+          <p>Academy content goes here.</p>
+        </article>
+
+        <article class="card">
+          <h3>Innovation &amp; Incubation</h3>
+          <p>Innovation content goes here.</p>
+        </article>
+
+        <article class="card">
+          <h3>Advisory Services</h3>
+          <p>Advisory content goes here.</p>
+        </article>
+      </div>
+
+      <!-- pipeline -->
+      <div class="pipeline">
+        <div class="pipe-step">Train</div>
+        <div class="pipe-step">Hire</div>
+        <div class="pipe-step">Innovate</div>
+        <div class="pipe-step">Deploy</div>
+      </div>
+    </section>
+
+
+    <!-- community -->
+    <section id="community">
+      <h2>Who We Serve</h2>
+      <p>Community content goes here.</p>
+    </section>
+
+
+    <!-- contact -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+
+      <form id="contactForm" novalidate>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required />
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="interest">I'm interested in</label>
+        <select id="interest" name="interest">
+          <option value="">Select an option…</option>
+          <option>Academy / Training Programmes</option>
+          <option>Hiring IDR Practitioners</option>
+          <option>Advisory Services</option>
+          <option>Research Partnership</option>
+          <option>Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Institute of Digital Risk. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+
 </body>
 </html>
