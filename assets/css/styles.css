@@ -1,0 +1,110 @@
+
+:root {
+
+  /*  colours  */
+  --white:        #ffffff;
+  --bg:           #f8fafc;      /* page background — cool off-white     */
+  --bg-alt:       #f1f5f9;      /* alternate section background          */
+  --surface:      #ffffff;      /* cards, nav, form panels               */
+  --border:       #e2e8f0;      /* all borders                           */
+  --border-lt:    #f1f5f9;      /* very subtle dividers                  */
+
+  /*  brand / accent  */
+  --teal:         #0891b2;      /* primary accent                        */
+  --teal-dk:      #0e7490;      /* darker teal — hover states            */
+  --teal-lt:      #e0f2fe;      /* light teal tint — tag backgrounds     */
+
+  /*  text  */
+  --text-head:    #0f172a;      /* headings                              */
+  --text-body:    #334155;      /* body copy                             */
+  --text-muted:   #64748b;      /* captions, secondary text              */
+  --text-xmuted:  #94a3b8;      /* placeholders, very subtle labels      */
+
+  /*  gradients  */
+  --grad:         linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #00c9a7 100%);
+  --grad-soft:    linear-gradient(135deg, #e0f2fe 0%, #ecfdf5 100%);
+  --grad-hero:    linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 40%, #f0fdf4 100%);
+
+  /*  typography  */
+  --font:         'DM Sans', system-ui, sans-serif;
+  --font-serif:   'Playfair Display', Georgia, serif;
+
+  /*  layout  */
+  --max:          1080px;       /* max content width                     */
+  --nav-h:        68px;         /* navbar height                         */
+  --pad-x:        clamp(24px, 6vw, 80px);   /* horizontal section padding */
+  --pad-sec:      clamp(72px, 10vw, 120px); /* vertical section padding   */
+  --radius:       12px;         /* small border radius                   */
+  --radius-lg:    20px;         /* large border radius — cards           */
+
+  /*  shadows  */
+  --shadow-sm:    0 1px 3px rgba(15, 23, 42, 0.06),
+                  0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md:    0 4px 16px rgba(15, 23, 42, 0.08),
+                  0 2px 4px  rgba(15, 23, 42, 0.04);
+  --shadow-teal:  0 4px 20px rgba(8, 145, 178, 0.22);
+  --shadow-hover: 0 8px 32px rgba(8, 145, 178, 0.30);
+
+  /*  transitions  */
+  --t:            0.22s ease;   /* standard transition speed             */
+  --t-slow:       0.38s ease;   /* slower — card hovers, reveals         */
+}
+
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* base  */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+/* default */
+
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
