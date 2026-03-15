@@ -20,20 +20,19 @@ function initMobileNav() {
     menu.classList.toggle('open', willOpen);
     burger.classList.toggle('open', willOpen);
     burger.setAttribute('aria-expanded', String(willOpen));
-
-    
     document.body.style.overflow = willOpen ? 'hidden' : '';
   }
 
- 
   burger.addEventListener('click', () => toggleMenu());
 
-  
   $$('a', menu).forEach(link =>
     link.addEventListener('click', () => toggleMenu(false))
   );
 
-  
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) toggleMenu(false);
+  }, { passive: true });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.classList.contains('open')) {
       toggleMenu(false);
@@ -41,7 +40,6 @@ function initMobileNav() {
     }
   });
 }
-
 
 
 function initNavbarScroll() {
@@ -58,8 +56,6 @@ function initNavbarScroll() {
   // run once in case page loads mid-scroll
   updateScrollState();
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
