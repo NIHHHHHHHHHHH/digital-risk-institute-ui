@@ -304,39 +304,69 @@
     </section>
 
 
-    <!-- contact -->
-    <section id="contact">
-      <h2>Get in Touch</h2>
+       <!-- contact -->
+      <section id="contact">
+      <div class="container">
+        <div class="contact-wrap">
 
-      <form id="contactForm" novalidate>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname" required />
+          <div class="contact-left" data-reveal>
+            <div class="eyebrow">Get Involved</div>
+            <h2>Ready to build<br /><span class="italic-head">digital resilience?</span></h2>
+            <p>
+              Whether you want to train with us, hire our practitioners, explore
+              advisory, or partner on research — we'd love to hear from you.
+            </p>
+            <a href="/cdn-cgi/l/email-protection#0d65686161624d64697f2364637e796479787968" class="contact-email">
+              <span class="__cf_email__" data-cfemail="5d35383131321d34392f7334332e293429282938">[email&#160;protected]</span>
+            </a>
+            <p class="contact-loc">
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true">
+                <path d="M7 1a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6z" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.3"/>
+              </svg>
+              United Kingdom
+            </p>
+          </div>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname" required />
+          <form id="contactForm" class="contact-form" data-reveal data-delay="1" novalidate>
+            <h3>Register Your Interest</h3>
+            <div class="form-row">
+              <div class="field">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Jane" required />
+              </div>
+              <div class="field">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@organisation.com" required />
+            </div>
+            <div class="field">
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option…</option>
+                <option>Academy / Training Programmes</option>
+                <option>Hiring IDR Practitioners</option>
+                <option>Advisory Services (NIST / ISO 27001 / NIS2)</option>
+                <option>Research Partnership</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message <span class="opt">(optional)</span></label>
+              <textarea id="message" name="message" placeholder="Tell us about your goals…"></textarea>
+            </div>
+            <div id="formMsg" role="alert" aria-live="polite"></div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-note">We respond within 2 working days. No spam, ever.</p>
+          </form>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="interest">I'm interested in</label>
-        <select id="interest" name="interest">
-          <option value="">Select an option…</option>
-          <option>Academy / Training Programmes</option>
-          <option>Hiring IDR Practitioners</option>
-          <option>Advisory Services</option>
-          <option>Research Partnership</option>
-          <option>Other</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
-  </main>
-
+        </div>
+      </div>
+    </section> 
 
   <!-- footer -->
      <footer>
