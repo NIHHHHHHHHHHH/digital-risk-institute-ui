@@ -145,6 +145,16 @@ function initForm() {
       showMsg("Thanks! We'll be in touch within 2 working days.");
       form.reset();
 
+      // resets button back after 5 seconds
+      setTimeout(() => {
+        submit.textContent      = 'Send Message';
+        submit.style.background = '';
+        submit.style.boxShadow  = '';
+        submit.disabled         = false;
+        showMsg('');
+      }, 5000);
+      
+
     } catch {
       showMsg('Something went wrong — please email us directly at hello@idr.institute', true);
       setLoading(false);
