@@ -314,6 +314,10 @@ h3 {
   opacity: 0.88;
   transform: translateY(-1px);
 }
+
+.nav-links .nav-btn.active::after {
+  display: none;
+}
  
 
 .burger {
