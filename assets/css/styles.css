@@ -115,7 +115,44 @@ button {
   padding-inline: var(--pad-x);
 }
  
- 
+
+.btn {
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  transition: transform var(--t), box-shadow var(--t), background var(--t), color var(--t), border-color var(--t);
+}
+
+.btn-primary {
+  background: var(--grad);
+  color: var(--white);
+  box-shadow: var(--shadow-teal);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+}
+.btn-outline:hover {
+  background: var(--teal);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-teal);
+}
+
+.btn-full { width: 100%; text-align: center; }
+
+
 /* navbar */
  
 /* Fixed bar — stays at top while scrolling */
@@ -282,4 +319,214 @@ button {
   .burger         { display: flex; }
   .logo-full      { display: none; }
   .logo-icon-only { display: block; }
+}
+
+
+#hero {
+  padding: calc(var(--nav-h) + 72px) var(--pad-x) 96px;
+  background: var(--grad-hero);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blurred circle */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(8,145,178,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: var(--max);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-lt);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: var(--font);
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--text-head);
+  margin-bottom: 22px;
+}
+
+/* Italic + gradient text in h1 */
+.hero-italic {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.78;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Stat cards on the right */
+.hero-card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.hero-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t), box-shadow var(--t);
+}
+.hero-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.hero-card--accent {
+  background: var(--grad);
+  border-color: transparent;
+}
+.hero-card--accent .hc-value { color: var(--white); }
+.hero-card--accent .hc-label { color: rgba(255,255,255,0.75); }
+
+.hc-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hc-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+
+
+@media (max-width: 900px) {
+  #hero {
+    padding: calc(var(--nav-h) + 56px) var(--pad-x) 72px;
+  }
+ 
+  .hero-inner {
+    grid-template-columns: 1fr;   /* single column */
+    gap: 40px;
+    text-align: center;           /* centre everything */
+  }
+ 
+  .hero-label {
+    /* keep the badge centred */
+    display: inline-block;
+  }
+ 
+  .hero-sub {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+ 
+  .hero-actions {
+    justify-content: center;
+  }
+ 
+  /* Card group: centred, full width up to a comfortable max */
+  .hero-card-group {
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in one row */
+    gap: 10px;
+  }
+ 
+  .hc-value { font-size: 22px; }
+  .hc-label { font-size: 10px; }
+  .hero-card { padding: 18px 10px; }
+}
+ 
+ 
+@media (max-width: 560px) {
+  #hero {
+    padding: calc(var(--nav-h) + 40px) var(--pad-x) 56px;
+  }
+ 
+  h1 {
+    /* Force a comfortable line-break on small screens */
+    font-size: clamp(28px, 9vw, 40px);
+  }
+ 
+  .hero-sub {
+    font-size: 15px;
+  }
+ 
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+ 
+  /* Back to 2×2 grid on small phones */
+  .hero-card-group {
+    max-width: 280px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+ 
+  .hc-value { font-size: 24px; }
+  .hc-label { font-size: 10px; }
+  .hero-card { padding: 20px 14px; }
+}
+ 
+ 
+@media (max-width: 360px) {
+  .hero-label {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+ 
+  .hero-card-group {
+    max-width: 100%;
+  }
 }
