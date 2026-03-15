@@ -116,6 +116,66 @@ button {
 }
  
 
+
+/* shared topography */
+
+/* section eyebrow label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--grad);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+h2 {
+  font-family: var(--font);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: var(--text-head);
+}
+
+/* Italic serif accent inside headings */
+.italic-head {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--teal);
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-head);
+  margin-bottom: 10px;
+}
+
+/* Two-col section header */
+.sec-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 52px;
+}
+.sec-header h2  { margin: 0; }
+.sec-header > p { font-size: 16px; color: var(--text-muted); line-height: 1.75; padding-bottom: 4px; }
+
+/* button */
+
 .btn {
   display: inline-block;
   font-family: var(--font);
@@ -321,7 +381,7 @@ button {
   .logo-icon-only { display: block; }
 }
 
-
+/* hero */
 #hero {
   padding: calc(var(--nav-h) + 72px) var(--pad-x) 96px;
   background: var(--grad-hero);
@@ -530,3 +590,152 @@ h1 {
     max-width: 100%;
   }
 }
+
+
+
+/* about */
+
+#about {
+  padding: var(--pad-sec) var(--pad-x);
+  background: var(--white);
+}
+ 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+ 
+.about-body p {
+  font-size: 18px;
+  line-height: 1.82;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.about-body p:last-child { margin: 0; }
+.about-body strong { color: var(--text-body); font-weight: 600; }
+ 
+/* Four-column number cards strip */
+.about-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+ 
+.num-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+  position: relative;
+  overflow: hidden;
+}
+.num-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--grad);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+.num-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #c7d8e8;
+}
+.num-card:hover::before { opacity: 1; }
+ 
+.nc-val {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.nc-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+ 
+ 
+@media (max-width: 900px) {
+  #about {
+    padding: clamp(56px, 8vw, 96px) var(--pad-x);
+  }
+ 
+  .about-grid {
+    grid-template-columns: 1fr;   /* stack heading above copy */
+    gap: 28px;
+    margin-bottom: 44px;
+  }
+ 
+  .about-grid h2 {
+    font-size: clamp(26px, 4vw, 40px);
+  }
+ 
+  .about-body p {
+    font-size: 17px;
+  }
+ 
+  .about-numbers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+ 
+  .nc-val { font-size: 30px; }
+}
+ 
+ 
+
+@media (max-width: 560px) {
+  #about {
+    padding: clamp(48px, 7vw, 72px) var(--pad-x);
+  }
+ 
+  .about-grid {
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+ 
+  .about-grid h2 {
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.18;
+  }
+ 
+  .about-body p {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+ 
+  .about-numbers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+ 
+  .num-card {
+    padding: 22px 14px;
+  }
+ 
+  .nc-val  { font-size: 26px; }
+  .nc-lbl  { font-size: 10px; }
+}
+ 
+ 
+@media (max-width: 360px) {
+  .about-numbers {
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px;
+  }
+ 
+  .num-card { padding: 18px 10px; }
+  .nc-val   { font-size: 22px; }
+}
+ 
